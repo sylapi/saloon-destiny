@@ -1,0 +1,21 @@
+{
+    "name": "sylapi/saloon-destiny",
+    "type": "library",
+    "require": {
+        "saloonphp/saloon": "^3.0",
+        "jms/serializer": "^3.17",
+        "rakit/validation": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.5"
+    },
+    "autoload": {
+        "psr-4": { 
+            "Sylapi\\Saloon\\Destiny\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "Sylapi\\Saloon\\Destiny\\Tests\\": "tests/" }
+    }
+}

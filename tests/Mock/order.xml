@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document-Order>
+  <Order-Header>
+    <OrderNumber><![CDATA[1]]></OrderNumber>
+    <OrderDate><![CDATA[2021-01-01]]></OrderDate>
+    <OrderTime><![CDATA[12:01]]></OrderTime>
+    <ExpectedDeliveryDate><![CDATA[2021-01-02]]></ExpectedDeliveryDate>
+    <ExpectedDeliveryTime><![CDATA[13:15]]></ExpectedDeliveryTime>
+    <CollectionDate><![CDATA[2021-01-01]]></CollectionDate>
+    <CollectionTime><![CDATA[12:00]]></CollectionTime>
+    <DocumentFunctionCode><![CDATA[0]]></DocumentFunctionCode>
+    <MessageType><![CDATA[OD]]></MessageType>
+    <Remarks><![CDATA[1]]></Remarks>
+    <PrintedRemarks><![CDATA[1]]></PrintedRemarks>
+    <OrderCurrency><![CDATA[PLN]]></OrderCurrency>
+    <SupplierBusinessPlaceCode><![CDATA[PL]]></SupplierBusinessPlaceCode>
+    <Errors/>
+  </Order-Header>
+  <Order-Parties>
+    <Buyer>
+      <ILN><![CDATA[]]></ILN>
+      <Name><![CDATA[Patryk]]></Name>
+      <StreetAndNumber><![CDATA[Pieski 25a]]></StreetAndNumber>
+      <CityName><![CDATA[Międzyrzecz]]></CityName>
+      <PostalCode><![CDATA[66-300]]></PostalCode>
+      <Country><![CDATA[PL]]></Country>
+      <TaxID>5961761702</TaxID>
+      <ElectronicMail><![CDATA[p.rogala@savicki.pl]]></ElectronicMail>
+      <Errors/>
+      <AccountNumber><![CDATA[1234567890]]></AccountNumber>
+    </Buyer>
+    <UltimateCustomer>
+      <ILN><![CDATA[]]></ILN>
+      <Name><![CDATA[Patryk]]></Name>
+      <StreetAndNumber><![CDATA[Pieski 25a]]></StreetAndNumber>
+      <CityName><![CDATA[Międzyrzecz]]></CityName>
+      <PostalCode><![CDATA[66-300]]></PostalCode>
+      <Country><![CDATA[PL]]></Country>
+      <TaxID>5961761702</TaxID>
+      <ElectronicMail><![CDATA[p.rogala@savicki.pl]]></ElectronicMail>
+      <Errors/>
+    </UltimateCustomer>
+    <Seller>
+      <ILN><![CDATA[]]></ILN>
+      <Name><![CDATA[SAVICKI]]></Name>
+      <StreetAndNumber><![CDATA[Gorzowska 2a]]></StreetAndNumber>
+      <CityName><![CDATA[Zielona Góra]]></CityName>
+      <PostalCode><![CDATA[65-127]]></PostalCode>
+      <Country><![CDATA[PL]]></Country>
+      <TaxID>9731046027</TaxID>
+      <Errors/>
+    </Seller>
+    <Errors/>
+  </Order-Parties>
+  <Order-Lines>
+    <Line>
+      <Line-Item>
+        <LineNumber>1</LineNumber>
+        <Ean><![CDATA[XYZ]]></Ean>
+        <SupplierItemCode><![CDATA[SIC]]></SupplierItemCode>
+        <SupplierStorehouseId>11</SupplierStorehouseId>
+        <ItemDescription><![CDATA[Product XYZ]]></ItemDescription>
+        <OrderedQuantity>1</OrderedQuantity>
+        <OrderedUnitNetPrice>100.0</OrderedUnitNetPrice>
+        <OrderedUnitRetailPrice>123.0</OrderedUnitRetailPrice>
+        <OrderedUnitGrossPrice>123.0</OrderedUnitGrossPrice>
+        <ExpectedDeliveryDate><![CDATA[2021-01-01]]></ExpectedDeliveryDate>
+        <ExpectedDeliveryTime><![CDATA[13:00]]></ExpectedDeliveryTime>
+        <Errors/>
+      </Line-Item>
+      <Errors/>
+    </Line>
+    <Line>
+      <Line-Item>
+        <LineNumber>2</LineNumber>
+        <Ean><![CDATA[XYZ2]]></Ean>
+        <SupplierItemCode><![CDATA[SIC2]]></SupplierItemCode>
+        <SupplierStorehouseId>4</SupplierStorehouseId>
+        <ItemDescription><![CDATA[Product XYZ2]]></ItemDescription>
+        <OrderedQuantity>1</OrderedQuantity>
+        <OrderedUnitNetPrice>200.0</OrderedUnitNetPrice>
+        <OrderedUnitRetailPrice>246.0</OrderedUnitRetailPrice>
+        <OrderedUnitGrossPrice>246.0</OrderedUnitGrossPrice>
+        <ExpectedDeliveryDate><![CDATA[2021-01-02]]></ExpectedDeliveryDate>
+        <ExpectedDeliveryTime><![CDATA[14:00]]></ExpectedDeliveryTime>
+        <Errors/>
+      </Line-Item>
+      <Errors/>
+    </Line>
+  </Order-Lines>
+  <Errors/>
+  <Order-Summary>
+    <TotalLines>2</TotalLines>
+    <TotalOrderedAmount>2</TotalOrderedAmount>
+    <TotalNetAmount>369.0</TotalNetAmount>
+    <Errors/>
+  </Order-Summary>
+  <Errors/>
+</Document-Order>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document-Invoice>
+  <Invoice-Header>
+    <InvoiceNumber><![CDATA[1]]></InvoiceNumber>
+    <InvoiceDate><![CDATA[2021-01-01]]></InvoiceDate>
+    <SalesDate><![CDATA[2021-01-01]]></SalesDate>
+    <InvoiceCurrency><![CDATA[PLN]]></InvoiceCurrency>
+    <InvoicePaymentDueDate><![CDATA[2021-01-02]]></InvoicePaymentDueDate>
+    <InvoicePaymentTerms>15</InvoicePaymentTerms>
+    <InvoicePaymentMeans>42</InvoicePaymentMeans>
+    <InvoicePostDate><![CDATA[2021-01-01]]></InvoicePostDate>
+    <DocumentFunctionCode><![CDATA[0]]></DocumentFunctionCode>
+    <Remarks><![CDATA[1]]></Remarks>
+    <Errors/>
+  </Invoice-Header>
+  <Invoice-Parties>
+    <Buyer>
+      <Name><![CDATA[Patryk]]></Name>
+      <StreetAndNumber><![CDATA[Pieski 25a]]></StreetAndNumber>
+      <CityName><![CDATA[Międzyrzecz]]></CityName>
+      <PostalCode><![CDATA[66-300]]></PostalCode>
+      <Country><![CDATA[PL]]></Country>
+      <TaxID>5961761702</TaxID>
+      <ElectronicMail>test@sylapi.com</ElectronicMail>
+      <Errors/>
+    </Buyer>
+    <Seller>
+      <ILN><![CDATA[]]></ILN>
+      <Name><![CDATA[SAVICKI]]></Name>
+      <StreetAndNumber><![CDATA[Gorzowska 2a]]></StreetAndNumber>
+      <CityName><![CDATA[Zielona Góra]]></CityName>
+      <PostalCode><![CDATA[65-127]]></PostalCode>
+      <Country><![CDATA[PL]]></Country>
+      <TaxID>9731046027</TaxID>
+      <Errors/>
+    </Seller>
+    <Errors/>
+  </Invoice-Parties>
+  <Invoice-Lines>
+    <Line>
+      <Line-Item>
+        <LineNumber>1</LineNumber>
+        <SupplierItemCode><![CDATA[SIC]]></SupplierItemCode>
+        <SupplierStorehouseId>11</SupplierStorehouseId>
+        <ItemDescription><![CDATA[Product XYZ]]></ItemDescription>
+        <InvoiceQuantity>1</InvoiceQuantity>
+        <InvoiceUnitNetPrice>100.0</InvoiceUnitNetPrice>
+        <InvoiceUnitRetailPrice>123.0</InvoiceUnitRetailPrice>
+        <InvoiceUnitGrossPrice>123.0</InvoiceUnitGrossPrice>
+        <TaxRate>23.0</TaxRate>
+        <TaxCategoryCode><![CDATA[S]]></TaxCategoryCode>
+        <Errors/>
+      </Line-Item>
+      <Errors/>
+    </Line>
+    <Line>
+      <Line-Item>
+        <LineNumber>2</LineNumber>
+        <SupplierItemCode><![CDATA[SIC2]]></SupplierItemCode>
+        <SupplierStorehouseId>4</SupplierStorehouseId>
+        <ItemDescription><![CDATA[Product XYZ2]]></ItemDescription>
+        <InvoiceQuantity>1</InvoiceQuantity>
+        <InvoiceUnitNetPrice>200.0</InvoiceUnitNetPrice>
+        <InvoiceUnitRetailPrice>246.0</InvoiceUnitRetailPrice>
+        <InvoiceUnitGrossPrice>246.0</InvoiceUnitGrossPrice>
+        <TaxRate>46.0</TaxRate>
+        <TaxCategoryCode><![CDATA[S]]></TaxCategoryCode>
+        <Errors/>
+      </Line-Item>
+      <Errors/>
+    </Line>
+  </Invoice-Lines>
+  <Errors/>
+  <Errors/>
+</Document-Invoice>
