@@ -14,12 +14,12 @@ class GetMarginsRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return 'm/plugin/savicki/live_order_margin?date_from=' . $this->dateFrom . '&date_to=' . $this->dateTo;
+        return 'm/plugin/savicki/live_order_margin?date_from=' . $this->dateFrom->format('Y-m-d') . '&date_to=' .  $this->dateTo->format('Y-m-d');
     }
     
     public function __construct(public DateTime $dateFrom, public DateTime $dateTo)
     {
-        $this->dateFrom = $dateFrom->format('Y-m-d');
-        $this->dateTo = $dateTo->Format('Y-m-d');
+        $this->dateFrom = $dateFrom;
+        $this->dateTo = $dateTo;
     }
 }

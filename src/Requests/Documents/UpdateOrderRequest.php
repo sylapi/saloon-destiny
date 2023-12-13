@@ -23,7 +23,7 @@ class UpdateOrderRequest extends Request implements HasBody
         return 'm/option/order_sale_doc/' . $this->orderId;
     }
 
-    public function __construct(public int $orderId, public Order $order)
+    public function __construct(public string $orderId, public Order $order)
     {
         
     }

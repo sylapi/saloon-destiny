@@ -24,6 +24,8 @@ class GetGoodRequest extends Request
                 } else {
                     $endpoint .= '&cond[' . $key . '_eq]=' . $value; 
                 }
+
+                $i++;
             }
         }
 

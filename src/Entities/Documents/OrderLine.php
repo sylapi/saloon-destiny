@@ -9,8 +9,8 @@ class OrderLine
 {
     use Errorable;
 
-    private int $orderId;
-    private int $measureUnitId;
+    private string $orderId;
+    private string $measureUnitId;
     private int $goodId;
     private float $totalPrice;
     private string $name;
@@ -60,7 +60,7 @@ class OrderLine
     /**
      * Get the value of orderId
      */
-    public function getOrderId(): int
+    public function getOrderId(): string
     {
         return $this->orderId;
     }
@@ -70,7 +70,7 @@ class OrderLine
      *
      * @return  self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(string $orderId): self
     {
         $this->orderId = $orderId;
 
@@ -80,7 +80,7 @@ class OrderLine
     /**
      * Get the value of measureUnitId
      */
-    public function getMeasureUnitId(): int
+    public function getMeasureUnitId(): string
     {
         return $this->measureUnitId;
     }
@@ -90,7 +90,7 @@ class OrderLine
      *
      * @return  self
      */
-    public function setMeasureUnitId(int $measureUnitId): self
+    public function setMeasureUnitId(string $measureUnitId): self
     {
         $this->measureUnitId = $measureUnitId;
 
