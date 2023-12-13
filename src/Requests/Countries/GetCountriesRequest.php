@@ -1,5 +1,5 @@
 <?php
-namespace Sylapi\Saloon\Destiny\Requests\Currencies;
+namespace Sylapi\Saloon\Destiny\Requests\Countries;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
