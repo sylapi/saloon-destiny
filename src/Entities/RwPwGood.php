@@ -41,7 +41,7 @@ class RwPwGood implements Arrayable
     public function toArray()
     {
         return [
-            'ean'       => isset($this->ean) ?? null,
+            'ean'       => $this->ean ?? null,
             'quantity'  => $this->quantity,
             'code'      => $this->code,
         ];

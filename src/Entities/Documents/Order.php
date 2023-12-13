@@ -10,7 +10,7 @@ class Order
 {
     use Errorable;
 
-    private int $externalOrderId;
+    private string $externalOrderId;
     private DateTime $completionDate;
     private ?string $customerTaxId;
     private string $customerPostalCode;
@@ -73,7 +73,7 @@ class Order
     /**
      * Get the value of externalOrderId
      */ 
-    public function getExternalOrderId()
+    public function getExternalOrderId(): string
     {
         return $this->externalOrderId;
     }

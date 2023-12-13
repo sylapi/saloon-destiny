@@ -168,7 +168,7 @@ class Good implements Arrayable
     /**
      * Get the value of idSysConstListLumpRate
      */ 
-    public function getIdSysConstListLumpRate(): int
+    public function getIdSysConstListLumpRate(): string
     {
         return $this->idSysConstListLumpRate;
     }
@@ -178,7 +178,7 @@ class Good implements Arrayable
      *
      * @return  self
      */ 
-    public function setIdSysConstListLumpRate(int $idSysConstListLumpRate)
+    public function setIdSysConstListLumpRate(string $idSysConstListLumpRate)
     {
         $this->idSysConstListLumpRate = $idSysConstListLumpRate;
 
@@ -228,7 +228,7 @@ class Good implements Arrayable
     /**
      * Get the value of idSysConstListGoodType
      */ 
-    public function getIdSysConstListGoodType(): int
+    public function getIdSysConstListGoodType(): string
     {
         return $this->idSysConstListGoodType;
     }
@@ -238,7 +238,7 @@ class Good implements Arrayable
      *
      * @return  self
      */ 
-    public function setIdSysConstListGoodType(int $idSysConstListGoodType)
+    public function setIdSysConstListGoodType(string $idSysConstListGoodType)
     {
         $this->idSysConstListGoodType = $idSysConstListGoodType;
 
@@ -292,8 +292,8 @@ class Good implements Arrayable
             'invoice_name'                      => $this->invoiceName,
             'description'                       => $this->description,
             'code'                              => $this->code,
-            'producer_code'                     => isset($this->producerCode) ?? '',
-            'ean'                               => isset($this->ean) ?? '',    
+            'producer_code'                     => $this->producerCode ?? '',
+            'ean'                               => $this->ean ?? '',    
             'id_measure_unit'                   => $this->idMeasureUnit,
             'id_sys_const_list-lump_rate'       => $this->idSysConstListLumpRate,
             'id_vat_rate'                       => $this->idVatRate,
