@@ -5,7 +5,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 
-class GetCurrenciesRequest extends Request
+class GetCountriesRequest extends Request
 {
     protected Method $method = Method::GET;
 
