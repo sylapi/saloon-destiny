@@ -13,6 +13,6 @@ class GetCountriesRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return 'm/option/currency';
+        return 'm/option/country';
     }
 }
