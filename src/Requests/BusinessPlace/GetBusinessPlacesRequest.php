@@ -5,7 +5,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 
-class GetBusinessPlaceRequest extends Request
+class GetBusinessPlacesRequest extends Request
 {
     protected Method $method = Method::GET;
 
