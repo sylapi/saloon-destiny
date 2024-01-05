@@ -16,14 +16,6 @@ class GetGoodItemsFromStorehouseRequest extends Request
         return 'm/plugin/savicki/live_storehouse_state?_fields=' . $this->fields . '&id_storehouse_place=' . $this->storehouseId;
     }
     
-    /*public function defaultData(): array
-    {
-        return [
-            'date_from' => $this->dateFrom,
-            'date_to'   => $this->dateTo,
-        ];
-    }*/
-    
     public function __construct(public int $storehouseId, public string $fields)
     {
         

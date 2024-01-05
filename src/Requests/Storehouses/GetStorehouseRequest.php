@@ -1,11 +1,11 @@
 <?php
-namespace Sylapi\Saloon\Destiny\Requests\Warehouses;
+namespace Sylapi\Saloon\Destiny\Requests\Storehouses;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 
-class GetWarehousesRequest extends Request
+class GetStorehousesRequest extends Request
 {
     protected Method $method = Method::GET;
 
