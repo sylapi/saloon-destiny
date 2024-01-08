@@ -74,7 +74,7 @@ class GetStorehouseItemsRequest extends Request
         $storehouseItemsList = new StorehouseItemsList();
 
         foreach ($data as $item) {
-            $storehouseItem = new StorehouseItem($item['id_good_item'], $item['id_good'], $item['quantity'], $item['quantity_avaible'], $item['good_item.size'] ?? null, $this->mapFineness((int) ($item['good_item.id_sys_const_list-jeweler_assay'] ?? 8589935785)), $item['good_item.params'] ?? null, $item['good_item.ean'] ?? null);
+            $storehouseItem = new StorehouseItem($item['id_good_item'], $item['id_good'], $item['quantity'], $item['quantity_avaible'], $item['good_item.size'] ?? null, $this->mapFineness((int) ($item['good_item.id_sys_const_list-jeweler_assay'] ?? 8589935785)), $item['good_item.params'] ?? null, $item['good_item.ean'] ?? null, null);
 
             $storehouseItemsList->add($storehouseItem);
         }
