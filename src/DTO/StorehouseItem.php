@@ -17,7 +17,8 @@ final class StorehouseItem
          * @var array<string, mixed>
          */
         public ?array $params,
-        public ?string $ean
+        public ?string $ean,
+        public ?GoodItem $goodItem
     ) {
     }
 }

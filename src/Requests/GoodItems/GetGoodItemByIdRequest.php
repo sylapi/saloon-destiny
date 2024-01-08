@@ -45,6 +45,7 @@ class GetGoodItemByIdRequest extends Request
         }
 
         return new GoodItem(
+            id: $item['id'],
             code: $item['code'],
             name: $item['name'],
         );
