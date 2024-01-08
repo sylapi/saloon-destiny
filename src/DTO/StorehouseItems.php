@@ -10,5 +10,6 @@ class StorehouseItems
 {
     public function __construct(
         public ?StorehouseItemsList $items,
-    ) {}
+    ) {
+    }
 }

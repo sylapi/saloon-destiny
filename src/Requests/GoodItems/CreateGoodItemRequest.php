@@ -2,9 +2,9 @@
 
 namespace Sylapi\Saloon\Destiny\Requests\GoodItems;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Traits\Body\HasJsonBody;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 use Sylapi\Saloon\Destiny\Entities\GoodItem;
@@ -24,12 +24,11 @@ class CreateGoodItemRequest extends Request implements HasBody
 
     public function __construct(public GoodItem $goodItem)
     {
-        
+
     }
 
     public function defaultData(): array
     {
         return $this->goodItem->toArray();
     }
-    
 }

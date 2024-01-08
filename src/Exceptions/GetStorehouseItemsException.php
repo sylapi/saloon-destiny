@@ -6,4 +6,6 @@ namespace Sylapi\Saloon\Destiny\Exceptions;
 
 use Exception;
 
-final class GetStorehouseItemsException extends Exception {}
+final class GetStorehouseItemsException extends Exception
+{
+}

@@ -1,4 +1,5 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Tests\Documents;
 
 use DateTime;
@@ -22,7 +23,7 @@ class InvoiceTest extends TestCase
         $invoice->setSaleDate(new DateTime());
         $invoice->setDocDate(new DateTime());
         $invoice->setCountryIso('PL');
-        
+
         $this->assertTrue($invoice->validate());
 
         return $invoice;
@@ -31,12 +32,12 @@ class InvoiceTest extends TestCase
     public function testCreateOrder()
     {
         $mockClient = new MockClient([
-            MockResponse::make(['result_code' => 0, 'json_data' => []], 200)
+            MockResponse::make(['result_code' => 0, 'json_data' => []], 200),
         ]);
 
         $invoice = $this->createInvoice();
         $request = new CreateInvoiceRequest($invoice);
-        
+
         $connector = new DestinyConnector();
 
         $response = $connector->send($request, $mockClient);

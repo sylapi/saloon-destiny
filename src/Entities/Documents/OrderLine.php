@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Sylapi\Saloon\Destiny\Entities\Documents;
 
@@ -10,39 +10,47 @@ class OrderLine
     use Errorable;
 
     private string $orderId;
+
     private string $measureUnitId;
+
     private int $goodId;
+
     private float $totalPrice;
+
     private string $name;
+
     private float $quantity;
+
     private int $storehousePlaceId;
+
     private int $currencyId;
+
     private int $goodItemId;
 
     public function validate(): bool
     {
         $rules = [
-            'order_id'  => 'required|numeric',
-            'measure_unit_id'  => 'required|numeric',
-            'good_id'  => 'required|numeric',
-            'total_price'  => 'required|numeric',
-            'name'  => 'required',
-            'quantity'  => 'required|numeric',
-            'storehouse_place_id'  => 'required|numeric',
-            'currency_id'  => 'required|numeric',
-            'good_item_id'  => 'nullable|numeric',
+            'order_id' => 'required|numeric',
+            'measure_unit_id' => 'required|numeric',
+            'good_id' => 'required|numeric',
+            'total_price' => 'required|numeric',
+            'name' => 'required',
+            'quantity' => 'required|numeric',
+            'storehouse_place_id' => 'required|numeric',
+            'currency_id' => 'required|numeric',
+            'good_item_id' => 'nullable|numeric',
         ];
 
         $data = [
-            'order_id'  => $this->getOrderId(),
-            'measure_unit_id'  => $this->getMeasureUnitId(),
-            'good_id'  => $this->getGoodId(),
-            'total_price'  => $this->getTotalPrice(),
-            'name'  => $this->getName(),
-            'quantity'  => $this->getQuantity(),
-            'storehouse_place_id'  => $this->getStorehousePlaceId(),
-            'currency_id'  => $this->getCurrencyId(),
-            'good_item_id'  => $this->getGoodItemId(),
+            'order_id' => $this->getOrderId(),
+            'measure_unit_id' => $this->getMeasureUnitId(),
+            'good_id' => $this->getGoodId(),
+            'total_price' => $this->getTotalPrice(),
+            'name' => $this->getName(),
+            'quantity' => $this->getQuantity(),
+            'storehouse_place_id' => $this->getStorehousePlaceId(),
+            'currency_id' => $this->getCurrencyId(),
+            'good_item_id' => $this->getGoodItemId(),
         ];
 
         $validator = new Validator();
@@ -67,8 +75,6 @@ class OrderLine
 
     /**
      * Set the value of orderId
-     *
-     * @return  self
      */
     public function setOrderId(string $orderId): self
     {
@@ -87,8 +93,6 @@ class OrderLine
 
     /**
      * Set the value of measureUnitId
-     *
-     * @return  self
      */
     public function setMeasureUnitId(string $measureUnitId): self
     {
@@ -107,8 +111,6 @@ class OrderLine
 
     /**
      * Set the value of goodId
-     *
-     * @return  self
      */
     public function setGoodId(int $goodId): self
     {
@@ -127,8 +129,6 @@ class OrderLine
 
     /**
      * Set the value of totalPrice
-     *
-     * @return  self
      */
     public function setTotalPrice(float $totalPrice): self
     {
@@ -147,8 +147,6 @@ class OrderLine
 
     /**
      * Set the value of name
-     *
-     * @return  self
      */
     public function setName(string $name): self
     {
@@ -167,8 +165,6 @@ class OrderLine
 
     /**
      * Set the value of quantity
-     *
-     * @return  self
      */
     public function setQuantity(float $quantity): self
     {
@@ -187,8 +183,6 @@ class OrderLine
 
     /**
      * Set the value of storehousePlaceId
-     *
-     * @return  self
      */
     public function setStorehousePlaceId(int $storehousePlaceId): self
     {
@@ -207,8 +201,6 @@ class OrderLine
 
     /**
      * Set the value of currencyId
-     *
-     * @return  self
      */
     public function setCurrencyId(int $currencyId): self
     {
@@ -227,8 +219,6 @@ class OrderLine
 
     /**
      * Set the value of goodItemId
-     *
-     * @return  self
      */
     public function setGoodItemId(?int $goodItemId): self
     {

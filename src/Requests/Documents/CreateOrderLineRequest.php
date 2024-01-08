@@ -2,13 +2,12 @@
 
 namespace Sylapi\Saloon\Destiny\Requests\Documents;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Traits\Body\HasJsonBody;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 use Sylapi\Saloon\Destiny\Entities\Documents\OrderLine;
-
 
 class CreateOrderLineRequest extends Request implements HasBody
 {
@@ -25,7 +24,7 @@ class CreateOrderLineRequest extends Request implements HasBody
 
     public function __construct(public OrderLine $orderLine)
     {
-        
+
     }
 
     public function defaultData(): array
@@ -43,5 +42,4 @@ class CreateOrderLineRequest extends Request implements HasBody
             'gross_doc' => 1,
         ];
     }
-    
 }

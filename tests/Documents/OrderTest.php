@@ -1,4 +1,5 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Tests\Documents;
 
 use DateTime;
@@ -29,21 +30,20 @@ class OrderTest extends TestCase
         $order->setCustomerId(1);
 
         $this->assertTrue($order->validate());
-        
+
         return $order;
     }
 
     public function testCreateOrder()
     {
         $mockClient = new MockClient([
-            MockResponse::make(['result_code' => 0, 'json_data' => []], 200)
+            MockResponse::make(['result_code' => 0, 'json_data' => []], 200),
         ]);
 
         $order = $this->createOrder();
         $request = new CreateOrderRequest($order);
 
         $connector = new DestinyConnector();
-        
 
         $response = $connector->send($request, $mockClient);
         $this->assertEquals(0, $response->json()['result_code']);

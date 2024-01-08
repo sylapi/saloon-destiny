@@ -1,13 +1,13 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Tests\Documents;
 
-use DateTime;
 use PHPUnit\Framework\TestCase;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 use Sylapi\Saloon\Destiny\DestinyConnector;
-use Sylapi\Saloon\Destiny\Entities\RwPwGood;
 use Sylapi\Saloon\Destiny\Entities\Documents\RwPw;
+use Sylapi\Saloon\Destiny\Entities\RwPwGood;
 use Sylapi\Saloon\Destiny\Requests\Documents\CreateRwPwRequest;
 
 class RwPwTest extends TestCase
@@ -34,20 +34,20 @@ class RwPwTest extends TestCase
         $rwpw->setNote('test2');
 
         $this->assertTrue($rwpw->validate());
-       
+
         return $rwpw;
     }
 
     public function testCreateRwPw()
     {
         $mockClient = new MockClient([
-            MockResponse::make(['result_code' => 0, 'json_data' => []], 200)
+            MockResponse::make(['result_code' => 0, 'json_data' => []], 200),
         ]);
 
         $rwpw = $this->createRwPw();
 
         $request = new CreateRwPwRequest($rwpw);
-        
+
         $connector = new DestinyConnector();
 
         $response = $connector->send($request, $mockClient);

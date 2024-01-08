@@ -2,13 +2,12 @@
 
 namespace Sylapi\Saloon\Destiny\Requests\Documents;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Traits\Body\HasJsonBody;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 use Sylapi\Saloon\Destiny\Entities\Documents\Order;
-
 
 class CreateOrderRequest extends Request implements HasBody
 {
@@ -25,7 +24,7 @@ class CreateOrderRequest extends Request implements HasBody
 
     public function __construct(public Order $order)
     {
-        
+
     }
 
     public function defaultData(): array
@@ -51,5 +50,4 @@ class CreateOrderRequest extends Request implements HasBody
             'id_country' => $this->order->getCountryId(),
         ];
     }
-    
 }

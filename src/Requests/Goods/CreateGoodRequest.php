@@ -5,9 +5,9 @@ namespace Sylapi\Saloon\Destiny\Requests\Goods;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Sylapi\Saloon\Destiny\Entities\Good;
-use Sylapi\Saloon\Destiny\DestinyConnector;
 use Saloon\Traits\Body\HasJsonBody;
+use Sylapi\Saloon\Destiny\DestinyConnector;
+use Sylapi\Saloon\Destiny\Entities\Good;
 
 class CreateGoodRequest extends Request implements HasBody
 {
@@ -24,7 +24,7 @@ class CreateGoodRequest extends Request implements HasBody
 
     public function __construct(public Good $good)
     {
-        
+
     }
 
     public function defaultData(): array

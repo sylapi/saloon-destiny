@@ -2,12 +2,11 @@
 
 namespace Sylapi\Saloon\Destiny\Requests\Documents;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Traits\Body\HasJsonBody;
 use Sylapi\Saloon\Destiny\DestinyConnector;
-
 
 class DeleteOrderLineRequest extends Request implements HasBody
 {
@@ -19,17 +18,16 @@ class DeleteOrderLineRequest extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return 'm/option/order_sale_pos/' . $this->orderLineId;
+        return 'm/option/order_sale_pos/'.$this->orderLineId;
     }
 
     public function __construct(public int $orderLineId)
     {
-        
+
     }
 
     public function defaultData(): array
     {
         return [];
     }
-    
 }

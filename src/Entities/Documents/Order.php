@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Sylapi\Saloon\Destiny\Entities\Documents;
 
@@ -6,56 +6,68 @@ use DateTime;
 use Rakit\Validation\Validator;
 use Sylapi\Saloon\Destiny\Traits\Errorable;
 
-class Order 
+class Order
 {
     use Errorable;
 
     private string $externalOrderId;
+
     private DateTime $completionDate;
+
     private ?string $customerTaxId;
+
     private string $customerPostalCode;
+
     private string $customerAddress;
+
     private string $customerPostOffice;
+
     private string $customerEmail;
+
     private string $customerName;
+
     private int $currencyId;
+
     private int $paymentWayId;
+
     private int $businessPlaceId;
+
     private int $countryId;
+
     private int $customerId;
 
     public function validate(): bool
     {
         $rules = [
-            'external_order_id'  => 'required|numeric',
-            'completion_date'    => 'required',
-            'customer_tax_id'    => 'numeric|nullable',
-            'customer_postal_code'  => 'required',
-            'customer_address'  => 'required',
-            'customer_post_office'  => 'required',
-            'customer_email'  => 'required|email',
-            'customer_name'  => 'required',
-            'currency_id'  => 'required|numeric',
-            'payment_way_id'  => 'required|numeric',
-            'business_place_id'  => 'required|numeric',
-            'country_id'  => 'required|numeric',
-            'customer_id'  => 'required|numeric',
+            'external_order_id' => 'required|numeric',
+            'completion_date' => 'required',
+            'customer_tax_id' => 'numeric|nullable',
+            'customer_postal_code' => 'required',
+            'customer_address' => 'required',
+            'customer_post_office' => 'required',
+            'customer_email' => 'required|email',
+            'customer_name' => 'required',
+            'currency_id' => 'required|numeric',
+            'payment_way_id' => 'required|numeric',
+            'business_place_id' => 'required|numeric',
+            'country_id' => 'required|numeric',
+            'customer_id' => 'required|numeric',
         ];
 
         $data = [
-            'external_order_id'  => $this->getExternalOrderId(),
-            'completion_date'    => $this->getCompletionDate(),
-            'customer_tax_id'    => $this->getCustomerTaxId(),
-            'customer_postal_code'  => $this->getCustomerPostalCode(),
-            'customer_address'  => $this->getCustomerAddress(),
-            'customer_post_office'  => $this->getCustomerPostOffice(),
-            'customer_email'  => $this->getCustomerEmail(),
-            'customer_name'  => $this->getCustomerName(),
-            'currency_id'  => $this->getCurrencyId(),
-            'payment_way_id'  => $this->getPaymentWayId(),
-            'business_place_id'  => $this->getBusinessPlaceId(),
-            'country_id'  => $this->getCountryId(),
-            'customer_id'  => $this->getCustomerId(),
+            'external_order_id' => $this->getExternalOrderId(),
+            'completion_date' => $this->getCompletionDate(),
+            'customer_tax_id' => $this->getCustomerTaxId(),
+            'customer_postal_code' => $this->getCustomerPostalCode(),
+            'customer_address' => $this->getCustomerAddress(),
+            'customer_post_office' => $this->getCustomerPostOffice(),
+            'customer_email' => $this->getCustomerEmail(),
+            'customer_name' => $this->getCustomerName(),
+            'currency_id' => $this->getCurrencyId(),
+            'payment_way_id' => $this->getPaymentWayId(),
+            'business_place_id' => $this->getBusinessPlaceId(),
+            'country_id' => $this->getCountryId(),
+            'customer_id' => $this->getCustomerId(),
         ];
 
         $validator = new Validator();
@@ -72,7 +84,7 @@ class Order
 
     /**
      * Get the value of externalOrderId
-     */ 
+     */
     public function getExternalOrderId(): string
     {
         return $this->externalOrderId;
@@ -82,14 +94,14 @@ class Order
      * Set the value of externalOrderId
      *
      * @return  self
-     */ 
+     */
     public function setExternalOrderId(string $externalOrderId)
     {
         $this->externalOrderId = $externalOrderId;
 
         return $this;
     }
-    
+
     /**
      * Get the value of completionDate
      */

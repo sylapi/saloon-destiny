@@ -1,10 +1,10 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Tests\GoodItems;
 
 use PHPUnit\Framework\TestCase;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
-use Sylapi\Saloon\Destiny\Entities\Good;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 use Sylapi\Saloon\Destiny\Entities\GoodItem;
 use Sylapi\Saloon\Destiny\Requests\GoodItems\CreateGoodItemRequest;
@@ -15,11 +15,11 @@ class GoodItemTest extends TestCase
     public function testGetGoodItemByIdRequest()
     {
         $mockClient = new MockClient([
-            MockResponse::make(['result_code' => 0, 'json_data' => []], 200)
+            MockResponse::make(['result_code' => 0, 'json_data' => []], 200),
         ]);
 
         $request = new GetGoodItemByIdRequest(12356);
-        
+
         $connector = new DestinyConnector();
 
         $response = $connector->send($request, $mockClient);
@@ -31,7 +31,7 @@ class GoodItemTest extends TestCase
     public function testCreateGoodItem()
     {
         $mockClient = new MockClient([
-            MockResponse::make(['result_code' => 0, 'json_data' => []], 200)
+            MockResponse::make(['result_code' => 0, 'json_data' => []], 200),
         ]);
 
         $goodItem = $this->createGoodItem();
@@ -39,7 +39,7 @@ class GoodItemTest extends TestCase
         $this->assertEquals(true, $goodItem->validate());
 
         $request = new CreateGoodItemRequest($goodItem);
-        
+
         $connector = new DestinyConnector();
 
         $response = $connector->send($request, $mockClient);
@@ -72,7 +72,6 @@ class GoodItemTest extends TestCase
         $goodItem->addSize(5);
         $goodItem->addSize(6);
         $goodItem->addSize(7);
-
 
         return $goodItem;
     }

@@ -9,9 +9,9 @@ use Sylapi\Saloon\Destiny\DestinyConnector;
 class GetGoodItemRequest extends Request
 {
     public ?int $tries = 10;
-    
+
     public ?int $retryInterval = 500;
-    
+
     public ?bool $useExponentialBackoff = true;
 
     protected Method $method = Method::GET;
@@ -20,11 +20,11 @@ class GetGoodItemRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return 'm/option/good_item?' . http_build_query($this->params);
+        return 'm/option/good_item?'.http_build_query($this->params);
     }
 
     public function __construct(public array $params)
     {
-        
+
     }
 }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Sylapi\Saloon\Destiny\Entities;
 
@@ -9,34 +9,56 @@ use Sylapi\Saloon\Destiny\Traits\Errorable;
 class GoodItem implements Arrayable
 {
     use Errorable;
-    
+
     private int $idGood;
+
     private string $name;
+
     private string $invoiceName;
+
     private string $description;
+
     private string $code;
+
     private string $producerCode;
+
     private string $ean;
+
     private int $idMeasureUnit;
+
     private string $idSysConstListLumpRate;
+
     private int $idVatRate;
+
     private int $idGoodGroup;
+
     private string $idSysConstListGoodType;
+
     private int $status;
+
     private int $idSysConstListGoodStrategy;
+
     private string $note;
+
     private int $netPrice;
+
     private int $totPrice;
+
     private int $inactive;
+
     private int $idUserGoodGroup;
+
     private int $idProducer;
+
     private int $size;
+
     private int $idSysConstListJewelerAssay;
+
     private array $params;
 
     /**
      * Get the value of name
-     */ 
+     */
     public function getName()
     {
         return $this->name;
@@ -46,7 +68,7 @@ class GoodItem implements Arrayable
      * Set the value of name
      *
      * @return  self
-     */ 
+     */
     public function setName(string $name)
     {
         $this->name = $name;
@@ -56,7 +78,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of invoiceName
-     */ 
+     */
     public function getInvoiceName()
     {
         return $this->invoiceName;
@@ -66,7 +88,7 @@ class GoodItem implements Arrayable
      * Set the value of invoiceName
      *
      * @return  self
-     */ 
+     */
     public function setInvoiceName(string $invoiceName)
     {
         $this->invoiceName = $invoiceName;
@@ -76,7 +98,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of description
-     */ 
+     */
     public function getDescription()
     {
         return $this->description;
@@ -86,7 +108,7 @@ class GoodItem implements Arrayable
      * Set the value of description
      *
      * @return  self
-     */ 
+     */
     public function setDescription(string $description)
     {
         $this->description = $description;
@@ -96,7 +118,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of code
-     */ 
+     */
     public function getCode()
     {
         return $this->code;
@@ -106,7 +128,7 @@ class GoodItem implements Arrayable
      * Set the value of code
      *
      * @return  self
-     */ 
+     */
     public function setCode(string $code)
     {
         $this->code = $code;
@@ -116,7 +138,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of producerCode
-     */ 
+     */
     public function getProducerCode()
     {
         return $this->producerCode;
@@ -126,7 +148,7 @@ class GoodItem implements Arrayable
      * Set the value of producerCode
      *
      * @return  self
-     */ 
+     */
     public function setProducerCode(string $producerCode)
     {
         $this->producerCode = $producerCode;
@@ -136,7 +158,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of ean
-     */ 
+     */
     public function getEan()
     {
         return $this->ean;
@@ -146,7 +168,7 @@ class GoodItem implements Arrayable
      * Set the value of ean
      *
      * @return  self
-     */ 
+     */
     public function setEan(string $ean)
     {
         $this->ean = $ean;
@@ -156,7 +178,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idMeasureUnit
-     */ 
+     */
     public function getIdMeasureUnit(): int
     {
         return $this->idMeasureUnit;
@@ -166,7 +188,7 @@ class GoodItem implements Arrayable
      * Set the value of idMeasureUnit
      *
      * @return  self
-     */ 
+     */
     public function setIdMeasureUnit(int $idMeasureUnit)
     {
         $this->idMeasureUnit = $idMeasureUnit;
@@ -176,7 +198,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idSysConstListLumpRate
-     */ 
+     */
     public function getIdSysConstListLumpRate()
     {
         return $this->idSysConstListLumpRate;
@@ -186,7 +208,7 @@ class GoodItem implements Arrayable
      * Set the value of idSysConstListLumpRate
      *
      * @return  self
-     */ 
+     */
     public function setIdSysConstListLumpRate(string $idSysConstListLumpRate)
     {
         $this->idSysConstListLumpRate = $idSysConstListLumpRate;
@@ -196,7 +218,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idVatRate
-     */ 
+     */
     public function getIdVatRate(): int
     {
         return $this->idVatRate;
@@ -206,7 +228,7 @@ class GoodItem implements Arrayable
      * Set the value of idVatRate
      *
      * @return  self
-     */ 
+     */
     public function setIdVatRate(int $idVatRate)
     {
         $this->idVatRate = $idVatRate;
@@ -216,7 +238,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idGoodGroup
-     */ 
+     */
     public function getIdGoodGroup(): int
     {
         return $this->idGoodGroup;
@@ -226,7 +248,7 @@ class GoodItem implements Arrayable
      * Set the value of idGoodGroup
      *
      * @return  self
-     */ 
+     */
     public function setIdGoodGroup(int $idGoodGroup)
     {
         $this->idGoodGroup = $idGoodGroup;
@@ -236,7 +258,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idSysConstListGoodType
-     */ 
+     */
     public function getIdSysConstListGoodType()
     {
         return $this->idSysConstListGoodType;
@@ -246,7 +268,7 @@ class GoodItem implements Arrayable
      * Set the value of idSysConstListGoodType
      *
      * @return  self
-     */ 
+     */
     public function setIdSysConstListGoodType(string $idSysConstListGoodType)
     {
         $this->idSysConstListGoodType = $idSysConstListGoodType;
@@ -256,7 +278,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of status
-     */ 
+     */
     public function getStatus(): int
     {
         return $this->status;
@@ -266,7 +288,7 @@ class GoodItem implements Arrayable
      * Set the value of status
      *
      * @return  self
-     */ 
+     */
     public function setStatus(int $status)
     {
         $this->status = $status;
@@ -276,7 +298,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idSysConstListGoodStrategy
-     */ 
+     */
     public function getIdSysConstListGoodStrategy(): int
     {
         return $this->idSysConstListGoodStrategy;
@@ -286,7 +308,7 @@ class GoodItem implements Arrayable
      * Set the value of idSysConstListGoodStrategy
      *
      * @return  self
-     */ 
+     */
     public function setIdSysConstListGoodStrategy(int $idSysConstListGoodStrategy)
     {
         $this->idSysConstListGoodStrategy = $idSysConstListGoodStrategy;
@@ -296,7 +318,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of note
-     */ 
+     */
     public function getNote()
     {
         return $this->note;
@@ -306,7 +328,7 @@ class GoodItem implements Arrayable
      * Set the value of note
      *
      * @return  self
-     */ 
+     */
     public function setNote(string $note)
     {
         $this->note = $note;
@@ -316,7 +338,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of netPrice
-     */ 
+     */
     public function getNetPrice(): int
     {
         return $this->netPrice;
@@ -326,7 +348,7 @@ class GoodItem implements Arrayable
      * Set the value of netPrice
      *
      * @return  self
-     */ 
+     */
     public function setNetPrice(int $netPrice)
     {
         $this->netPrice = $netPrice;
@@ -336,7 +358,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of totPrice
-     */ 
+     */
     public function getTotPrice(): int
     {
         return $this->totPrice;
@@ -346,7 +368,7 @@ class GoodItem implements Arrayable
      * Set the value of totPrice
      *
      * @return  self
-     */ 
+     */
     public function setTotPrice(int $totPrice)
     {
         $this->totPrice = $totPrice;
@@ -356,7 +378,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idGood
-     */ 
+     */
     public function getIdGood(): int
     {
         return $this->idGood;
@@ -366,7 +388,7 @@ class GoodItem implements Arrayable
      * Set the value of idGood
      *
      * @return  self
-     */ 
+     */
     public function setIdGood(int $idGood)
     {
         $this->idGood = $idGood;
@@ -376,7 +398,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of inactive
-     */ 
+     */
     public function getInactive(): int
     {
         return $this->inactive;
@@ -386,7 +408,7 @@ class GoodItem implements Arrayable
      * Set the value of inactive
      *
      * @return  self
-     */ 
+     */
     public function setInactive(int $inactive)
     {
         $this->inactive = $inactive;
@@ -396,7 +418,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idUserGoodGroup
-     */ 
+     */
     public function getIdUserGoodGroup(): int
     {
         return $this->idUserGoodGroup;
@@ -406,7 +428,7 @@ class GoodItem implements Arrayable
      * Set the value of idUserGoodGroup
      *
      * @return  self
-     */ 
+     */
     public function setIdUserGoodGroup(int $idUserGoodGroup)
     {
         $this->idUserGoodGroup = $idUserGoodGroup;
@@ -416,7 +438,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idProducer
-     */ 
+     */
     public function getIdProducer(): int
     {
         return $this->idProducer;
@@ -426,7 +448,7 @@ class GoodItem implements Arrayable
      * Set the value of idProducer
      *
      * @return  self
-     */ 
+     */
     public function setIdProducer(int $idProducer)
     {
         $this->idProducer = $idProducer;
@@ -436,7 +458,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of size
-     */ 
+     */
     public function getSize(): int
     {
         return $this->size;
@@ -446,7 +468,7 @@ class GoodItem implements Arrayable
      * Set the value of size
      *
      * @return  self
-     */ 
+     */
     public function setSize(int $size)
     {
         $this->size = $size;
@@ -458,11 +480,11 @@ class GoodItem implements Arrayable
      * Add the value to params array
      *
      * @return  self
-     */ 
+     */
     public function addSize(int $size)
     {
         $this->params[] = [
-            'size' => $size
+            'size' => $size,
         ];
 
         return $this;
@@ -477,10 +499,10 @@ class GoodItem implements Arrayable
             'description' => $this->description ?? '',
             'code' => $this->code,
             'producer_code' => $this->producerCode ?? '',
-            'ean' => $this->ean ?? '', 
+            'ean' => $this->ean ?? '',
             'note' => $this->note ?? '',
-            'net_price' => $this->netPrice/100,
-            'tot_price' => $this->totPrice/100,
+            'net_price' => $this->netPrice / 100,
+            'tot_price' => $this->totPrice / 100,
             'id_measure_unit' => $this->idMeasureUnit,
             'id_vat_rate' => $this->idVatRate,
             'inactive' => $this->inactive,
@@ -496,7 +518,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of idSysConstListJewelerAssay
-     */ 
+     */
     public function getIdSysConstListJewelerAssay(): int
     {
         return $this->idSysConstListJewelerAssay;
@@ -506,7 +528,7 @@ class GoodItem implements Arrayable
      * Set the value of idSysConstListJewelerAssay
      *
      * @return  self
-     */ 
+     */
     public function setIdSysConstListJewelerAssay(int $idSysConstListJewelerAssay)
     {
         $this->idSysConstListJewelerAssay = $idSysConstListJewelerAssay;
@@ -529,7 +551,7 @@ class GoodItem implements Arrayable
             'id_good_group' => 'required|numeric',
             'id_sys_const_list-good_strategy' => 'required|numeric',
             'size' => 'required|numeric',
-            'id_sys_const_list-jeweler_assay' => 'required|numeric'
+            'id_sys_const_list-jeweler_assay' => 'required|numeric',
         ];
 
         $data = [
@@ -537,15 +559,15 @@ class GoodItem implements Arrayable
             'name' => $this->getName(),
             'invoice_name' => $this->getInvoiceName(),
             'code' => $this->getCode(),
-            'net_price' => $this->getNetPrice()/100,
-            'tot_price' => $this->getTotPrice()/100,
+            'net_price' => $this->getNetPrice() / 100,
+            'tot_price' => $this->getTotPrice() / 100,
             'id_measure_unit' => $this->getIdMeasureUnit(),
             'id_vat_rate' => $this->getIdVatRate(),
             'inactive' => $this->getInactive(),
             'id_good_group' => $this->getIdGoodGroup(),
             'id_sys_const_list-good_strategy' => $this->getIdSysConstListGoodStrategy(),
             'size' => $this->getSize(),
-            'id_sys_const_list-jeweler_assay' => $this->getIdSysConstListJewelerAssay()
+            'id_sys_const_list-jeweler_assay' => $this->getIdSysConstListJewelerAssay(),
         ];
 
         $validator = new Validator();
@@ -562,7 +584,7 @@ class GoodItem implements Arrayable
 
     /**
      * Get the value of params
-     */ 
+     */
     public function getParams(): array
     {
         return $this->params;
@@ -572,7 +594,7 @@ class GoodItem implements Arrayable
      * Set the value of params
      *
      * @return  self
-     */ 
+     */
     public function setParams(array $params)
     {
         $this->params = $params;
@@ -580,4 +602,3 @@ class GoodItem implements Arrayable
         return $this;
     }
 }
-                                           

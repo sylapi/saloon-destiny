@@ -9,5 +9,6 @@ class GoodItem
     public function __construct(
         public ?string $code,
         public ?string $name,
-    ) {}
+    ) {
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Requests\Storehouses;
 
 use Saloon\Enums\Method;
@@ -13,9 +14,9 @@ use Sylapi\Saloon\Destiny\Exceptions\GetStorehouseItemsException;
 class GetStorehouseItemsRequest extends Request
 {
     public ?int $tries = 10;
-    
+
     public ?int $retryInterval = 500;
-    
+
     public ?bool $useExponentialBackoff = true;
 
     protected Method $method = Method::GET;
@@ -34,15 +35,15 @@ class GetStorehouseItemsRequest extends Request
         8589935797 => '925',
         8589936041 => '950',
     ];
-    
+
     public function __construct(public string $storehouseId)
     {
-        
+
     }
 
     public function resolveEndpoint(): string
     {
-        return 'm/plugin/savicki/live_storehouse_state?_fields=id_storehouse_place,quantity,ean,quantity_reserved,quantity_avaible,id_good,good_item&id_storehouse_place=' . $this->storehouseId;
+        return 'm/plugin/savicki/live_storehouse_state?_fields=id_storehouse_place,quantity,ean,quantity_reserved,quantity_avaible,id_good,good_item&id_storehouse_place='.$this->storehouseId;
     }
 
     public function createDtoFromResponse(Response $response): mixed
@@ -60,16 +61,14 @@ class GetStorehouseItemsRequest extends Request
 
             return new StorehouseItems($storehouseItemsList);
         } else {
-            throw new GetStorehouseItemsException('Error while getting good items from storehouse. Error message: ' . $data['result_message']);
+            throw new GetStorehouseItemsException('Error while getting good items from storehouse. Error message: '.$data['result_message']);
         }
-
 
     }
 
     /**
-     * @param array<int,mixed> $data
+     * @param  array<int,mixed>  $data
      */
-
     private function getStorehouseItemsList(array $data): StorehouseItemsList
     {
         $storehouseItemsList = new StorehouseItemsList();
@@ -83,9 +82,6 @@ class GetStorehouseItemsRequest extends Request
         return $storehouseItemsList;
     }
 
-    /**
-     * @param int $fineness
-     */
     private function mapFineness(int $fineness): ?string
     {
         return $this->finenesses[$fineness] ?? null;

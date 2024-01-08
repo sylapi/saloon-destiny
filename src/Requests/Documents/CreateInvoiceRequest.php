@@ -2,9 +2,9 @@
 
 namespace Sylapi\Saloon\Destiny\Requests\Documents;
 
+use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Contracts\Body\HasBody;
 use Saloon\Traits\Body\HasJsonBody;
 use Sylapi\Saloon\Destiny\DestinyConnector;
 use Sylapi\Saloon\Destiny\Entities\Documents\Invoice;
@@ -24,7 +24,7 @@ class CreateInvoiceRequest extends Request implements HasBody
 
     public function __construct(public Invoice $invoice)
     {
-        
+
     }
 
     public function defaultData(): array
@@ -44,5 +44,4 @@ class CreateInvoiceRequest extends Request implements HasBody
             ],
         ];
     }
-    
 }

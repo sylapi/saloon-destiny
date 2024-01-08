@@ -18,5 +18,6 @@ final class StorehouseItem
          */
         public ?array $params,
         public ?string $ean
-    ) {}
+    ) {
+    }
 }

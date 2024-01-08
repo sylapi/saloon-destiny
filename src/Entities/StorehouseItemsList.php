@@ -15,20 +15,18 @@ final class StorehouseItemsList
 
     /**
      * The constructor.
-     * 
-     * @param StorehouseItem ...$storehouseItem The storehouseItems
+     *
+     * @param  StorehouseItem  ...$storehouseItem The storehouseItems
      */
-    public function __construct(StorehouseItem ...$storehouseItem) 
+    public function __construct(StorehouseItem ...$storehouseItem)
     {
         $this->list = $storehouseItem;
     }
-    
+
     /**
      * Add storehouseItem to list.
      *
-     * @param StorehouseItem $storehouseItem The storehouseItem
-     *
-     * @return void
+     * @param  StorehouseItem  $storehouseItem The storehouseItem
      */
     public function add(StorehouseItem $storehouseItem): void
     {

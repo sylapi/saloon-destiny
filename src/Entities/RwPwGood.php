@@ -1,29 +1,31 @@
-<?php 
+<?php
 
 namespace Sylapi\Saloon\Destiny\Entities;
 
 use Rakit\Validation\Validator;
-use Sylapi\Saloon\Destiny\Traits\Errorable;
 use Sylapi\Saloon\Destiny\Contracts\Arrayable;
+use Sylapi\Saloon\Destiny\Traits\Errorable;
 
 class RwPwGood implements Arrayable
 {
     use Errorable;
 
     private string $code;
+
     private string $ean;
+
     private int $quantity;
 
     public function validate()
     {
         $rules = [
-            'quantity'  => 'required|numeric',
-            'code'      => 'required'
+            'quantity' => 'required|numeric',
+            'code' => 'required',
         ];
-        
+
         $data = [
-            'quantity'  => $this->getQuantity(),
-            'code'      => $this->getCode()
+            'quantity' => $this->getQuantity(),
+            'code' => $this->getCode(),
         ];
 
         $validator = new Validator();
@@ -41,15 +43,15 @@ class RwPwGood implements Arrayable
     public function toArray()
     {
         return [
-            'ean'       => $this->ean ?? null,
-            'quantity'  => $this->quantity,
-            'code'      => $this->code,
+            'ean' => $this->ean ?? null,
+            'quantity' => $this->quantity,
+            'code' => $this->code,
         ];
     }
 
     /**
      * Get the value of code
-     */ 
+     */
     public function getCode()
     {
         return $this->code;
@@ -59,7 +61,7 @@ class RwPwGood implements Arrayable
      * Set the value of code
      *
      * @return  self
-     */ 
+     */
     public function setCode($code)
     {
         $this->code = $code;
@@ -69,7 +71,7 @@ class RwPwGood implements Arrayable
 
     /**
      * Get the value of ean
-     */ 
+     */
     public function getEan()
     {
         return $this->ean;
@@ -79,7 +81,7 @@ class RwPwGood implements Arrayable
      * Set the value of ean
      *
      * @return  self
-     */ 
+     */
     public function setEan($ean)
     {
         $this->ean = $ean;
@@ -89,7 +91,7 @@ class RwPwGood implements Arrayable
 
     /**
      * Get the value of quantity
-     */ 
+     */
     public function getQuantity()
     {
         return $this->quantity;
@@ -99,7 +101,7 @@ class RwPwGood implements Arrayable
      * Set the value of quantity
      *
      * @return  self
-     */ 
+     */
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;

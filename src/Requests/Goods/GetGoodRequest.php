@@ -9,9 +9,9 @@ use Sylapi\Saloon\Destiny\DestinyConnector;
 class GetGoodRequest extends Request
 {
     public ?int $tries = 10;
-    
+
     public ?int $retryInterval = 500;
-    
+
     public ?bool $useExponentialBackoff = true;
 
     protected Method $method = Method::GET;
@@ -22,13 +22,13 @@ class GetGoodRequest extends Request
     {
         $endpoint = 'm/option/good';
 
-        if (!empty($this->params)) {
+        if (! empty($this->params)) {
             $i = 0;
             foreach ($this->params as $key => $value) {
                 if ($i == 0) {
-                    $endpoint .= '?cond[' . $key . '_eq]=' . $value; 
+                    $endpoint .= '?cond['.$key.'_eq]='.$value;
                 } else {
-                    $endpoint .= '&cond[' . $key . '_eq]=' . $value; 
+                    $endpoint .= '&cond['.$key.'_eq]='.$value;
                 }
 
                 $i++;
@@ -40,6 +40,6 @@ class GetGoodRequest extends Request
 
     public function __construct(public array $params)
     {
-        
+
     }
 }

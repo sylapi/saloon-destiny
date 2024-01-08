@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Sylapi\Saloon\Destiny\Entities\Documents;
 
@@ -11,36 +11,43 @@ class Invoice
     use Errorable;
 
     private int $orderId;
+
     private string $note;
+
     private int $paymentWayId;
+
     private string $printedNote;
+
     private DateTime $date;
+
     private DateTime $saleDate;
+
     private DateTime $docDate;
+
     private string $countryIso;
 
     public function validate(): bool
     {
         $rules = [
-            'order_id'  => 'required|numeric',
-            'note'  => 'nullable',
-            'payment_way_id'  => 'required|numeric',
-            'printed_note'  => 'nullable',
-            'date'  => 'required',
-            'sale_date'  => 'required',
-            'doc_date'  => 'required',
-            'country_iso'  => 'required',
+            'order_id' => 'required|numeric',
+            'note' => 'nullable',
+            'payment_way_id' => 'required|numeric',
+            'printed_note' => 'nullable',
+            'date' => 'required',
+            'sale_date' => 'required',
+            'doc_date' => 'required',
+            'country_iso' => 'required',
         ];
 
         $data = [
-            'order_id'  => $this->getOrderId(),
-            'note'  => $this->getNote(),
-            'payment_way_id'  => $this->getPaymentWayId(),
-            'printed_note'  => $this->getPrintedNote(),
-            'date'  => $this->getDate(),
-            'sale_date'  => $this->getSaleDate(),
-            'doc_date'  => $this->getDocDate(),
-            'country_iso'  => $this->getCountryIso(),
+            'order_id' => $this->getOrderId(),
+            'note' => $this->getNote(),
+            'payment_way_id' => $this->getPaymentWayId(),
+            'printed_note' => $this->getPrintedNote(),
+            'date' => $this->getDate(),
+            'sale_date' => $this->getSaleDate(),
+            'doc_date' => $this->getDocDate(),
+            'country_iso' => $this->getCountryIso(),
         ];
 
         $validator = new Validator();
@@ -65,8 +72,6 @@ class Invoice
 
     /**
      * Set the value of orderId
-     *
-     * @return  self
      */
     public function setOrderId(int $orderId): self
     {
@@ -85,8 +90,6 @@ class Invoice
 
     /**
      * Set the value of note
-     *
-     * @return  self
      */
     public function setNote(string $note): self
     {
@@ -105,8 +108,6 @@ class Invoice
 
     /**
      * Set the value of paymentWayId
-     *
-     * @return  self
      */
     public function setPaymentWayId(int $paymentWayId): self
     {
@@ -125,8 +126,6 @@ class Invoice
 
     /**
      * Set the value of printedNote
-     *
-     * @return  self
      */
     public function setPrintedNote(string $printedNote): self
     {
@@ -145,8 +144,6 @@ class Invoice
 
     /**
      * Set the value of date
-     *
-     * @return  self
      */
     public function setDate(DateTime $date): self
     {
@@ -165,8 +162,6 @@ class Invoice
 
     /**
      * Set the value of saleDate
-     *
-     * @return  self
      */
     public function setSaleDate(DateTime $saleDate): self
     {
@@ -185,8 +180,6 @@ class Invoice
 
     /**
      * Set the value of docDate
-     *
-     * @return  self
      */
     public function setDocDate(DateTime $docDate): self
     {
@@ -205,8 +198,6 @@ class Invoice
 
     /**
      * Set the value of countryIso
-     *
-     * @return  self
      */
     public function setCountryIso(string $countryIso): self
     {

@@ -1,19 +1,20 @@
 <?php
+
 namespace Sylapi\Saloon\Destiny\Requests\GoodItems;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
-use Sylapi\Saloon\Destiny\DTO\GoodItem;
 use Sylapi\Saloon\Destiny\DestinyConnector;
+use Sylapi\Saloon\Destiny\DTO\GoodItem;
 use Sylapi\Saloon\Destiny\Exceptions\GetGoodItemException;
 
 class GetGoodItemByIdRequest extends Request
 {
     public ?int $tries = 10;
-    
+
     public ?int $retryInterval = 500;
-    
+
     public ?bool $useExponentialBackoff = true;
 
     protected Method $method = Method::GET;
@@ -27,7 +28,7 @@ class GetGoodItemByIdRequest extends Request
 
     public function __construct(public int $id)
     {
-        
+
     }
 
     public function createDtoFromResponse(Response $response): mixed
@@ -35,11 +36,11 @@ class GetGoodItemByIdRequest extends Request
         $data = $response->json();
         $item = $data['json_data']['_rows'][0] ?? null;
 
-        if (!$item) {
+        if (! $item) {
             throw new GetGoodItemException('Item not found');
         }
 
-        if (!isset($item['code'])) {
+        if (! isset($item['code'])) {
             throw new GetGoodItemException('Item code is missing');
         }
 
